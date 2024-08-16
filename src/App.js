@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 function App() {
+  const percentage = 66;
+  const value = 0.66;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='box'>
+        <CircularProgressbar value={percentage} text={`${percentage}%`} />;
+      </div>
+      <div className='box'>
+        <CircularProgressbar value={value} maxValue={1} text={`${value * 100}%`} />;
+      </div>
+      
     </div>
   );
 }

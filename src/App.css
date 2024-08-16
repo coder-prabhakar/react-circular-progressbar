@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
+.App{
+    padding: 50px;
+    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    justify-content: space-around;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box{
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.box:first-child .CircularProgressbar {
+    background: aqua;
+    padding: 10px;
+    border-radius: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.box:first-child .CircularProgressbar-trail{
+    fill-opacity: 0;
+    stroke-width: 0;
 }
 
-.App-link {
-  color: #61dafb;
+
+.box:first-child .CircularProgressbar-path{
+    stroke: white !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box:first-child .CircularProgressbar-text{
+    fill: white !important;
 }
